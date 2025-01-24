@@ -1,13 +1,14 @@
 import streamlit as st
 import pandas as pd
 import pickle
+import joblib
 
 df = pickle.load(open('df_recipe.pkl','rb'))
 st.title("RECIPE WEB/APP")
 
 
 lst_name = pickle.load(open('rec_name.pkl','rb'))
-matching = pickle.load(open('rec_matching.pkl','rb'))
+matching = joblib.load('matching_compressed.pkl')
 
 recipe_name = st.selectbox("Select Food",lst_name)
 
