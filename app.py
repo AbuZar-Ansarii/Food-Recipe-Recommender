@@ -3,6 +3,7 @@ import pandas as pd
 import pickle
 import joblib
 
+
 df = pickle.load(open('df_recipe.pkl','rb'))
 st.title("RECIPE WEB/APP")
 
@@ -10,12 +11,13 @@ st.title("RECIPE WEB/APP")
 lst_name = pickle.load(open('rec_name.pkl','rb'))
 matching = joblib.load('matching_compressed.pkl')
 
+
 recipe_name = st.selectbox("Select Food",lst_name)
 
 def recipe_matcher(rec):
     index_of_recipe = df[df["name"] == rec].index[0]
     close_distance = matching[index_of_recipe]
-    lst_of_recipe = sorted(list(enumerate(close_distance)), reverse=True, key=lambda x: x[1])[1:8]
+    lst_of_recipe = sorted(list(enumerate(close_distance)), reverse=True, key=lambda x: x[1])[1:10]
 
     return [df.name.iloc[i[0]] for i in lst_of_recipe]
 
@@ -53,7 +55,7 @@ image_url = img_url(recipe_name)
 # action after button clicked
 
 if st.button('click'):
-    st.image(image_url,use_container_width=True)
+    st.image(image_url,use_column_width=True)
     col1, col2, col3 = st.columns(3)
     with col1:
         st.header(f"CUISINE \n{cus_type(recipe_name)}")
