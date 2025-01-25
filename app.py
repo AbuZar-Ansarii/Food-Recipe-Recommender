@@ -9,7 +9,6 @@ st.title("RECIPE WEB/APP")
 
 
 lst_name = pickle.load(open('rec_name.pkl','rb'))
-matching = joblib.load('matching_compressed.pkl')
 
 
 recipe_name = st.selectbox("Select Food",lst_name)
@@ -50,6 +49,9 @@ def img_url(img):
     return url
 
 image_url = img_url(recipe_name)
+
+#load cosine similarity by joblib 
+matching = joblib.load('matching_compressed.pkl')
 
 
 # action after button clicked
