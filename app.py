@@ -7,6 +7,8 @@ import joblib
 df = pickle.load(open('df_recipe.pkl','rb'))
 st.title("RECIPE WEB/APP")
 
+#load cosine similarity by joblib 
+matching = pickle.load(open ('matching_compressed.pkl','rb'))
 
 lst_name = pickle.load(open('rec_name.pkl','rb'))
 
@@ -50,8 +52,6 @@ def img_url(img):
 
 image_url = img_url(recipe_name)
 
-#load cosine similarity by joblib 
-matching = joblib.load('matching_compressed.pkl')
 
 
 # action after button clicked
