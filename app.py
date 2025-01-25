@@ -7,8 +7,7 @@ import joblib
 df = pickle.load(open('df_recipe.pkl','rb'))
 st.title("RECIPE WEB/APP")
 
-#load cosine similarity by joblib 
-matching = pickle.load(open ('matching_compressed.pkl','rb'))
+
 
 lst_name = pickle.load(open('rec_name.pkl','rb'))
 
@@ -69,6 +68,8 @@ if st.button('click'):
     st.header(f"INGREDIENTS \n{recipe_food(recipe_name)}")
     st.header(f"lET'S COOK IT \n{instruction(recipe_name)}")
     st.header(f"RECOMMENDATION FOR  \n{recipe_name}")
+#load cosine similarity by joblib 
+matching = joblib.load('matching_compressed.pkl')
     recommendations = recipe_matcher(recipe_name)
     for rec_recipe in recommendations:
         st.subheader(rec_recipe)
