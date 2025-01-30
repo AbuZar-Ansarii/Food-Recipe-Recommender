@@ -80,7 +80,7 @@ image_url = img_url(recipe_name)
 # Action after button click
 if st.button('Click to Get Recipe'):
     if image_url:
-        st.image(image_url, use_column_width=True)
+        st.image(image_url, use_container_width=True)
     
     col1, col2, col3 = st.columns(3)
     with col1:
