@@ -3,13 +3,14 @@ import pandas as pd
 import pickle
 import joblib
 
-# Load data
-df = pickle.load(open('df_recipe.pkl', 'rb'))
-lst_name = pickle.load(open('rec_name.pkl', 'rb'))
 
+# matching comment out because due to the file size
 # Load cosine similarity matrix
 # matching = joblib.load('matching_compressed.pkl')
 
+# Load data
+df = pickle.load(open('df_recipe.pkl', 'rb'))
+lst_name = pickle.load(open('rec_name.pkl', 'rb'))
 st.title("RECIPE WEB/APP")
 
 # Select food from dropdown
