@@ -91,6 +91,7 @@ if st.button('Click to Get Recipe'):
 
     st.header(f"INGREDIENTS\n{recipe_food(recipe_name)}")
     st.header(f"LET'S COOK IT\n{instruction(recipe_name)}")
+    
     # st.header(f"RECOMMENDATION FOR\n{recipe_name}")
 
     # Get recommendations and display
