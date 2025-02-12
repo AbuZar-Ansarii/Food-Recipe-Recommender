@@ -7,7 +7,14 @@ This project is a **Food Recipe Recommendation System** that suggests recipes ba
 - Recommend recipes based on available ingredients  
 - Filter recipes by cuisine type  
 - Suggest recipes based on user preferences  
-- Interactive web interface for easy usage  
+- Interactive web interface for easy usage
+
+## Images
+![Screenshot 2025-01-30 115045](https://github.com/user-attachments/assets/7f248bb1-95ed-4e4b-8213-191cbc6b6196)
+![Screenshot 2025-01-30 115206](https://github.com/user-attachments/assets/a438fcc4-b997-4dd2-bc6b-ce544bce5aae)
+![Screenshot 2025-01-30 115430](https://github.com/user-attachments/assets/9c09c9a8-d077-4909-937a-aba154f4d101)
+![Screenshot 2025-01-30 115456](https://github.com/user-attachments/assets/8fdc5945-2fb5-440a-b04e-335c7c086a3e)
+![Screenshot 2025-01-30 115231](https://github.com/user-attachments/assets/2e12e77e-8651-4093-963d-3934be06487a)
 
 ## 🛠️ Tech Stack
 - **Python** (Core logic & ML model)  
