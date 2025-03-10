@@ -95,7 +95,7 @@ if st.button('Click to Get Recipe'):
     
     st.header(f"RECOMMENDATION FOR\n{recipe_name}")
 
-    Get recommendations and display
+    # Get recommendations and display
     recommendations = recipe_matcher(recipe_name)
     if recommendations:
         for rec_recipe in recommendations:
