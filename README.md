@@ -26,7 +26,7 @@ This project is a **Food Recipe Recommendation System** that suggests recipes ba
 ## 📌 Installation & Setup
 1. **Clone the repository**
    ```sh
-   git clone https://github.com/yourusername/food-recipe-recommendation.git
+   git clone https://github.com/AbuZar-Ansarii/food-recipe-recommendation.git
    cd food-recipe-recommendation
 
    2. Install dependencies
