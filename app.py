@@ -5,8 +5,8 @@ import joblib
 
 
 ## matching comment out because due to the file size
-Load cosine similarity matrix
-matching = joblib.load('matching_compressed.pkl')
+# Load cosine similarity matrix
+matching = pickle.load(open('matching.pkl', 'rb'))
 
 # Load data
 df = pickle.load(open('df_recipe.pkl', 'rb'))
