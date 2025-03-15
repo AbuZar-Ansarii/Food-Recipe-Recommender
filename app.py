@@ -6,7 +6,7 @@ import joblib
 
 ## matching comment out because due to the file size
 # Load cosine similarity matrix
-matching = pickle.load(open('matching_compressed.pkl', 'rb'))
+# matching = pickle.load(open('matching_compressed.pkl', 'rb'))
 
 # Load data
 df = pickle.load(open('df_recipe.pkl', 'rb'))
@@ -93,15 +93,15 @@ if st.button('Click to Get Recipe'):
     st.header(f"INGREDIENTS\n{recipe_food(recipe_name)}")
     st.header(f"LET'S COOK IT\n{instruction(recipe_name)}")
     
-    st.header(f"RECOMMENDATION FOR\n{recipe_name}")
+    # st.header(f"RECOMMENDATION FOR\n{recipe_name}")
 
-    # Get recommendations and display
-    recommendations = recipe_matcher(recipe_name)
-    if recommendations:
-        for rec_recipe in recommendations:
-            st.subheader(rec_recipe)
-            i_url = img_url(rec_recipe)
-            if i_url:
-                st.image(i_url, width=400)
-    else:
-        st.write("No recommendations available.")
+    # # Get recommendations and display
+    # recommendations = recipe_matcher(recipe_name)
+    # if recommendations:
+    #     for rec_recipe in recommendations:
+    #         st.subheader(rec_recipe)
+    #         i_url = img_url(rec_recipe)
+    #         if i_url:
+    #             st.image(i_url, width=400)
+    # else:
+    #     st.write("No recommendations available.")
